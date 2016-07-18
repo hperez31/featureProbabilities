@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Efficient Computation of Feature Probabilities in Variability Models : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Efficient Computation of Feature Probabilities in Variability Models</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hperez30/featureProbabilities">View on GitHub</a>
+
+          <h1 id="project_title">Efficient Computation of Feature Probabilities in Variability Models</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hperez30/featureProbabilities/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hperez30/featureProbabilities/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="context" class="anchor" href="#context" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Context.</h3>
+
+<p>Variability models play a key role in product line engineering as they are used to represent the common and
+variable features that products may include, and what constraints among the features must be satisfied to guarantee
+the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing
+logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies
+long computation times for operations that need calling the engines many times. To overcome this problem, we work on
+new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, the algorithm published in this site is specifically designed to compute feature commonalities.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>This repository provides an algorithm to compute feature commonalities, which is written in the C++ programming language as an extension of the <a href="http://buddy.sourceforge.net/manual/main.html">Buddy BDD library</a>.</p>
+
+<h3>
+<a id="how-to-install-buddy" class="anchor" href="#how-to-install-buddy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Install BuDDy.</h3>
+
+<p>Follow the instructions in this section to install the BuDDy BDD package on your system, if it is not already installed.</p>
+
+<ul>
+<li>Download <a href="http://sourceforge.net/projects/buddy/">buddy-2.4.tar.gz</a> (766,5 kB).</li>
+<li>Unzip "gunzip buddy-2.4.tar.gz".</li>
+<li>Untar "tar xvf buddy-2.4.tar". </li>
+<li>"./configure"</li>
+<li>"make"</li>
+<li>"make install" </li>
+</ul>
+
+<h3>
+<a id="buddy-documentation" class="anchor" href="#buddy-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BuDDy Documentation</h3>
+
+<p>The buddy-2.4/doc directory contains documentation for the BuDDy package in postscript. An introduction to binary decision diagrams is described in the bddnotes.ps file. In addition, you can find a full description of the buddy package in buddy.ps.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Follow the instructions in this section to install our algorithm implementation.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>This work has been developed by Hector Perez-Morago.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>If you need further information, do not hesitate to contact Hector Perez-Morago (<a href="mailto:hectormorago@gmail.com">hectormorago@gmail.com</a>). </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Efficient Computation of Feature Probabilities in Variability Models maintained by <a href="https://github.com/hperez30">hperez30</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
