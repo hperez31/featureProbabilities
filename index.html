@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Efficient Computation of Feature Probabilities in Variability Models : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Efficient Computation of Feature Probabilities in Variability Models</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hperez30/featureProbabilities">View on GitHub</a>
+
+          <h1 id="project_title">Efficient Computation of Feature Probabilities in Variability Models</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hperez30/featureProbabilities/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hperez30/featureProbabilities/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="context" class="anchor" href="#context" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Context.</h3>
+
+<p>Variability models play a key role in product line engineering as they are used to represent the common and
+variable features that products may include, and what constraints among the features must be satisfied to guarantee
+the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing
+logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies
+long computation times for operations that need calling the engines many times. To overcome this problem, we work on
+new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, the algorithm published in this site is specifically designed to compute feature commonalities.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h3>
+
+<p>This repository provides an algorithm to compute feature commonalities, which is written in the C++ programming language as an extension of the <a href="http://buddy.sourceforge.net/manual/main.html">Buddy BDD library</a>.</p>
+
+<h3>
+<a id="how-to-install-buddy" class="anchor" href="#how-to-install-buddy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Install BuDDy.</h3>
+
+<p>Follow the instructions in this section to install the BuDDy BDD package on your system, if it is not already installed.</p>
+
+<ul>
+<li>Download <a href="http://sourceforge.net/projects/buddy/">buddy-2.4.tar.gz</a> (766,5 kB).</li>
+<li>Unzip "gunzip buddy-2.4.tar.gz".</li>
+<li>Untar "tar xvf buddy-2.4.tar". </li>
+<li>"./configure"</li>
+<li>"make"</li>
+<li>"make install" </li>
+</ul>
+
+<h3>
+<a id="buddy-documentation" class="anchor" href="#buddy-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BuDDy Documentation</h3>
+
+<p>The buddy-2.4/doc directory contains documentation for the BuDDy package in postscript. An introduction to binary decision diagrams is described in the bddnotes.ps file. In addition, you can find a full description of the buddy package in buddy.ps.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Follow the instructions in this section to install our algorithm implementation.</p>
+
+<h3>
+<a id="benchmark" class="anchor" href="#benchmark" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmark</h3>
+<p>To test the performance of our algorithm, use the following Benchmark, which includes variability models encoded as BuDDy BDDs, and the corresponding links to the repositories where they were originally published.</p>
+ 	
+<table id="attachments" class="sticky-enabled"><caption ALIGN=bottom>Table 1. Variability models</caption>
+ <thead><tr><th>id.</th><th>BDD Enconding</th><th>Link to the Original Model</th><th>id.</th><th>BDD enconding</th><th>Link to the Original Model</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>m1</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/billing/billing.bdd">Billing</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20110516_1331478109.xml">Billing</a></td><td>m11</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/axTLS/axTLS.bdd">axTLS</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">axTLS</a></td> </tr>
+ <tr class="odd"><td>m2</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/cocheEcologico/cocheEcologico.bdd">Coche Ecologico</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20091205_755658379.xml">Coche Ecologico</a></td><td>m12</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/fiasco/fiasco.bdd">fiasco</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">fiasco</a></td>  </tr>
+ <tr class="odd"><td>m3</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/upEstructural/up_estructural.bdd">Up Estructural</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20120725_1460954667.xml">Up Estructural</a></td><td>m13</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/uClibc/uClibc.bdd">uClibc</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">uClibc</a></td>  </tr>
+ <tr class="odd"><td>m4</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/xtext/xtext.bdd">xtext</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20101112_864228137.xml">xtext</a></td><td>m14</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/busyBox/busyBox.bdd">busyBox</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">busyBox</a></td>  </tr>
+ <tr class="odd"><td>m5</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/battleOfTanks/battleOfTanks.bdd">Battle of Tanks</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20140310_1916029542.xml">Battle of Tanks</a></td><td>m15</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/android/android.bdd">android</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">android</a></td>  </tr>
+ <tr class="odd"><td>m6</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/fmTest/fmTest.bdd">FM test</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20120829_191972511.xml">FM test</a></td><td>m16</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/FM-500-50-1/FM-500-50-1.bdd">FM-500-50-1</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">FM-500-50-1</a></td>   </tr>
+ <tr class="odd"><td>m7</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/printers/printers.bdd">Printers</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20110704_328391695.xml">Printers</a></td><td>m17</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/FM-1000-100-2/FM-1000-100-2.bdd">FM-1000-100-2</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">FM-1000-100-2</a></td>   </tr>
+ <tr class="odd"><td>m8</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/bankingSoftware/bankingSoftware.bdd">Banking software</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20130307_609838668.xml">Banking software</a></td><td>m18</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/FM-2000-200-3/FM-2000-200-3.bdd">FM-2000-200-3</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">FM-2000-200-3</a></td>   </tr>
+ <tr class="odd"><td>m9</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/eShop/eShop.bdd">eShop</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/REAL-FM-4.xml">eShop</a></td><td>m19</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/FM-5000-500-4/FM-5000-500-4.bdd">FM-5000-500-4</a></td><td><a href="http://gsd.uwaterloo.ca/sites/default/files/models.zip">FM-5000-500-4</a></td>   </tr>
+ <tr class="odd"><td>m10</td><td><a href="https://github.com/hperez30/featureProbabilities/blob/master/probabilities/samples/eis/eis.bdd">EIS</a></td><td><a href="http://ec2-52-27-187-106.us-west-2.compute.amazonaws.com:8080/SPLOT/models/model_20130908_1070185514.xml">EIS</a></td></tr>
+ 
+</tbody>
+</table>
+
+<h3>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h3>
+</h3>
+<p>This work has been developed by <a href="https://www.researchgate.net/profile/Hector_Perez-Morago">Hector Perez-Morago</a>
+</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+</h3>
+<p>
+This software has <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.
+</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
+<p>If you need further information, do not hesitate to contact Hector Perez-Morago (hperez@gmail.com).</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Efficient computation of Features Probabilities in Variability Models is maintained by <a href="https://github.com/hperez30">hperez30</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>    
+
+  </body>
+</html>
